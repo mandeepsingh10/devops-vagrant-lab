@@ -1,0 +1,21 @@
+Vagrant.configure("2") do |config|
+    
+config.winrm.transport = :plaintext
+config.winrm.basic_auth_only = true 
+  
+### prometheus and grafana vm ###
+config.vm.define "jenkins" do |j|
+    j.vm.box = "ubuntu/bionic64"
+    j.vm.network "private_network", ip: "192.168.56.5"
+    j.vm.provision "shell", path: "provision/initialize.sh"
+    j.vm.provision "shell", reboot: true
+    j.vm.provision "shell", path: "provision/add_to_domain.sh"
+    j.vm.provision "shell", path: "provision/jenkins_setup.sh"
+    j.vm.provider "virtualbox" do |vb|
+     vb.memory = "1024"
+     vb.name = "Prometheus_Grafana"
+    end
+    p.vm.provision "shell", reboot: true
+    end
+
+end 
