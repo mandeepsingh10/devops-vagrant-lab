@@ -13,9 +13,9 @@ config.vm.define "jenkins" do |j|
     j.vm.provision "shell", path: "provision/jenkins_setup.sh"
     j.vm.provider "virtualbox" do |vb|
      vb.memory = "1024"
-     vb.name = "Prometheus_Grafana"
+     vb.name = "Jenkins"
     end
-    p.vm.provision "shell", reboot: true
+    j.vm.provision "shell", reboot: true
     end
 
 end 
