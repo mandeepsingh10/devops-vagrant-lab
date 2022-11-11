@@ -63,7 +63,7 @@ sudo systemctl restart sshd.service
 cd /etc/sudoers.d/
 
 cat <<EOT> linux_admins
-%domain linux_admins@animals4life.local ALL=(ALL) NOPASSWD:ALL
+%linux_admins ALL=(ALL) NOPASSWD:ALL
 EOT
 
 #System has been provisioned

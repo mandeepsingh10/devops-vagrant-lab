@@ -58,4 +58,12 @@ sudo systemctl restart sssd.service
 sudo sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/g' /etc/ssh/sshd_config
 sudo systemctl restart sshd.service
 
+## Allow sudo access to linux-admins
+
+cd /etc/sudoers.d/
+
+cat <<EOT> linux_admins
+%linux_admins ALL=(ALL) NOPASSWD:ALL
+EOT
+
 #System has been provisioned
