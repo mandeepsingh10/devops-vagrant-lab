@@ -19,6 +19,7 @@ Vagrant.configure("2") do |config|
     dc.vm.network :forwarded_port, guest: 3389, host: 23389, id: "msrdp"
     dc.vm.network :forwarded_port, guest: 5985, host: 25985, id: "winrm"
     dc.vm.provision "shell", privileged: "true", path: "provision/setupdc.ps1"
+    dc.vm.provision "shell", privileged: "true", path: "provision/ou_setup.ps1"
     dc.vm.provision "shell", reboot: true
   end
 

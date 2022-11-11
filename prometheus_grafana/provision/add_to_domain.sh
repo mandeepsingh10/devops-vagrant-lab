@@ -14,7 +14,7 @@ cd /usr/share/pam-configs
 
 cat <<EOT> mkhomedir
 Name: Create home directory on login
-Default: no
+Default: yes
 Priority: 900
 Session-Type: Additional
 Session:
@@ -42,11 +42,18 @@ id_provider = ad
 krb5_store_password_if_offline = True
 default_shell = /bin/bash
 ldap_id_mapping = True
-use_fully_qualified_names = True
+use_fully_qualified_names = False
 fallback_homedir = /home/%u
 access_provider = simple
-ad_server = 192.168.56.2
+ad_server = '192.168.56.2'
 EOT
+
+sudo systemctl restart sssd.service
+
+#allow ad groups to login to the server
+sudo realm permit -g linux_users@animals4life.local
+sudo realm permit -g linux_admins@animals4life.local
+sudo systemctl restart sssd.service
 
 #update password login
 sudo sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/g' /etc/ssh/sshd_config
