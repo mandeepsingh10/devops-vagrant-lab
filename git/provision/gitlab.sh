@@ -7,7 +7,7 @@ apt-get install --assume-yes postfix
 cd /tmp
 curl -LO https://packages.gitlab.com/install/repositories/gitlab/gitlab-ce/script.deb.sh
 sudo bash /tmp/script.deb.sh
-sudo EXTERNAL_URL="http://a4l-gitlab.animals4life" apt-get install gitlab-ce
+sudo apt-get install gitlab-ce
 sudo gitlab-ctl reconfigure
 gitlab-ctl start
 
@@ -19,7 +19,7 @@ sudo ufw allow OpenSSH
 
 
 #Git ldap config
-
+<< ////
 cd /etc/gitlab
 
 cat <<EOT>> gitlab.rb
@@ -47,4 +47,4 @@ EOT
 
 sudo gitlab-ctl reconfigure
 gitlab-ctl start
-
+////
