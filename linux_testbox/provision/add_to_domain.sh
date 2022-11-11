@@ -45,7 +45,6 @@ ldap_id_mapping = True
 use_fully_qualified_names = False
 fallback_homedir = /home/%u
 access_provider = simple
-ad_server = '192.168.56.2'
 EOT
 
 sudo systemctl restart sssd.service
