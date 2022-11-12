@@ -2,7 +2,12 @@ Vagrant.configure("2") do |config|
   
   config.winrm.transport = :plaintext
   config.winrm.basic_auth_only = true  
-   
+  
+  config.vm.provider "virtualbox" do |vb|
+     vb.memory = "2048"
+     vb.name = "puppetmaster"
+  end
+  
 ### puppetmaster vm ###
   config.vm.define "puppetmaster" do |t|
     t.vm.box = "ubuntu/bionic64"
@@ -12,6 +17,7 @@ Vagrant.configure("2") do |config|
     t.vm.provision "shell", path: "provision/add_to_domain.sh"
     t.vm.provision "shell", reboot: true
     t.vm.provision "shell", path: "provision/install_node_exporter.sh"
+    t.vm.provision "shell", path: "provision/puppetmaster_setup.sh"
     end
   
 end

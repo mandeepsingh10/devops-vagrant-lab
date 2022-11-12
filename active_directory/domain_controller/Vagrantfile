@@ -26,20 +26,4 @@ Vagrant.configure("2") do |config|
     dc.vm.provision "shell", privileged: "true", path: "provision/install_win_exporter.ps1"
   end
 
-  config.vm.define "win_server" do |win_server|
-    win_server.vm.guest = :windows
-    win_server.vm.communicator = "winrm"
-    win_server.vm.boot_timeout = 600
-    win_server.vm.graceful_halt_timeout = 600
-    win_server.winrm.retry_limit = 30
-    win_server.winrm.retry_delay = 10
-    win_server.vm.box = "StefanScherer/windows_2019"
-    win_server.vm.hostname = "a4l-winnode01"
-    win_server.vm.network "private_network", ip: "192.168.56.3"
-    win_server.vm.network :forwarded_port, guest: 3389, host: 33389, id: "msrdp"
-    win_server.vm.network :forwarded_port, guest: 5985, host: 35985, id: "winrm"
-    win_server.vm.provision "shell", privileged: "true", path: "provision/add_to_domain.ps1"
-    win_server.vm.provision "shell", reboot: true 
-    win_server.vm.provision "shell", privileged: "true", path: "provision/install_win_exporter.ps1"
-   end
 end
