@@ -10,7 +10,7 @@ sudo apt update -y
 sudo apt upgrade -y
 
 #install packages required
-sudo apt install realmd libnss-sss libpam-sss sssd sssd-tools adcli samba-common-bin oddjob oddjob-mkhomedir packagekit  resolvconf -y
+sudo apt install realmd libnss-sss libpam-sss sssd sssd-tools adcli samba-common-bin oddjob oddjob-mkhomedir packagekit  resolvconf ncdu tree -y
 
 ##change hostname
 

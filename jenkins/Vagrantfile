@@ -11,6 +11,7 @@ config.vm.define "jenkins" do |j|
     j.vm.provision "shell", reboot: true
     j.vm.provision "shell", path: "provision/add_to_domain.sh"
     j.vm.provision "shell", path: "provision/jenkins_setup.sh"
+    j.vm.provision "shell", path: "provision/install_node_exporter.sh"
     j.vm.provider "virtualbox" do |vb|
      vb.memory = "1024"
      vb.name = "Jenkins"

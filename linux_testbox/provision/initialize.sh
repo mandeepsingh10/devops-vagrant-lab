@@ -10,7 +10,7 @@ sudo apt update -y
 sudo apt upgrade -y
 
 #install packages required
-sudo apt install realmd libnss-sss libpam-sss sssd sssd-tools adcli samba-common-bin oddjob oddjob-mkhomedir packagekit -y
+sudo apt install realmd libnss-sss libpam-sss sssd sssd-tools adcli samba-common-bin oddjob oddjob-mkhomedir packagekit resolvconf tree ncdu -y
 
 ##change hostname
 
@@ -24,8 +24,6 @@ nameserver 192.168.56.2
 options edns0
 EOT
 
-#install resolvconf
-sudo apt install resolvconf
 
 # add domain entry in /etc/resolvconf/resolv.conf.d/base
 cd /etc/resolvconf/resolv.conf.d/
