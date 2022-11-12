@@ -22,7 +22,7 @@ Vagrant.configure("2") do |config|
     dc.vm.provision "shell", privileged: "true", path: "provision/setupdc.ps1"
     dc.vm.provision "shell", reboot: true
     dc.vm.provision "shell", privileged: "true", path: "provision/ou_setup.ps1"
-    dc.vm.provision "shell", privileged: "true", path: "provision/install_win_exporter.ps1
+    dc.vm.provision "shell", privileged: "true", path: "provision/install_win_exporter.ps1"
   end
 
   config.vm.define "win_server" do |win_server|
