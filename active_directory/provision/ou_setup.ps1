@@ -16,15 +16,15 @@ New-ADGroup -Name "gitlab_users" -SamAccountName gitlab_users -GroupCategory Sec
 
 #Create users in AD
 
-New-ADUser -Name "Clark Kent" -SamAccountName "super.man" -Accountpassword $securepassword -Path "CN=Users,DC=animals4life,DC=local" -ChangePasswordAtLogon $False -PasswordNeverExpires $true -Enabled $true
+New-ADUser -Name "Clark Kent" -EmailAddress "mandeepsinghlaller+superman@gmail.com"-SamAccountName "super.man" -Accountpassword $securepassword -Path "CN=Users,DC=animals4life,DC=local" -ChangePasswordAtLogon $False -PasswordNeverExpires $true -Enabled $true
 
-New-ADUser -Name "Mandeep Singh" -SamAccountName "mandeep.s" -Accountpassword $securepassword -Path "CN=Users,DC=animals4life,DC=local" -ChangePasswordAtLogon $False -PasswordNeverExpires $true -Enabled $true
+New-ADUser -Name "Mandeep Singh" -EmailAddress "mandeepsinghlaller@gmail.com"-SamAccountName "mandeep.s" -Accountpassword $securepassword -Path "CN=Users,DC=animals4life,DC=local" -ChangePasswordAtLogon $False -PasswordNeverExpires $true -Enabled $true
 
-New-ADUser -Name "Bruce Wayne" -SamAccountName "bat.man" -Accountpassword $securepassword -Path "CN=Users,DC=animals4life,DC=local" -ChangePasswordAtLogon $False -PasswordNeverExpires $true -Enabled $true
+New-ADUser -Name "Bruce Wayne" -EmailAddress "mandeepsinghlaller+batman@gmail.com" -SamAccountName "bat.man" -Accountpassword $securepassword -Path "CN=Users,DC=animals4life,DC=local" -ChangePasswordAtLogon $False -PasswordNeverExpires $true -Enabled $true
 
-New-ADUser -Name "Peter Parker" -SamAccountName "spider.man" -Accountpassword $securepassword -Path "CN=Users,DC=animals4life,DC=local" -ChangePasswordAtLogon $False -PasswordNeverExpires $true -Enabled $true
+New-ADUser -Name "Peter Parker" -EmailAddress "mandeepsinghlaller+spiderman@gmail.com" -SamAccountName "spider.man" -Accountpassword $securepassword -Path "CN=Users,DC=animals4life,DC=local" -ChangePasswordAtLogon $False -PasswordNeverExpires $true -Enabled $true
 
-New-ADUser -Name "Tony Stark" -SamAccountName "iron.man" -Accountpassword $securepassword -Path "CN=Users,DC=animals4life,DC=local" -ChangePasswordAtLogon $False -PasswordNeverExpires $true -Enabled $true
+New-ADUser -Name "Tony Stark" -EmailAddress "mandeepsinghlaller+ironman@gmail.com" -SamAccountName "iron.man" -Accountpassword $securepassword -Path "CN=Users,DC=animals4life,DC=local" -ChangePasswordAtLogon $False -PasswordNeverExpires $true -Enabled $true
 
 Add-ADGroupMember -Identity linux_users -Members bat.man,mandeep.s,super.man,iron.man,spider.man
 Add-ADGroupMember -Identity linux_admins -Members bat.man,mandeep.s

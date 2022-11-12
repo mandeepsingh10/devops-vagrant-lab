@@ -7,6 +7,7 @@ apt-get install --assume-yes postfix
 cd /tmp
 curl -LO https://packages.gitlab.com/install/repositories/gitlab/gitlab-ce/script.deb.sh
 sudo bash /tmp/script.deb.sh
+sudo EXTERNAL_URL="http://a4l-git.animals4life.local"
 sudo apt-get install gitlab-ce
 #sudo gitlab-ctl reconfigure
 #gitlab-ctl start
@@ -47,6 +48,7 @@ EOS
 
 EOT
 
+#### Configure and start gitlab
 sudo gitlab-ctl reconfigure
 gitlab-ctl start
 
