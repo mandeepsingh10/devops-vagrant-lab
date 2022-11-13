@@ -2,7 +2,11 @@ Vagrant.configure("2") do |config|
   
   config.winrm.transport = :plaintext
   config.winrm.basic_auth_only = true  
-   
+  
+config.vm.provider "virtualbox" do |vb|
+     vb.memory = "1024"
+     vb.name = "Linux-01"
+ 
 ### linux test vm ###
   config.vm.define "linux01" do |t|
     t.vm.box = "debian/bullseye64"

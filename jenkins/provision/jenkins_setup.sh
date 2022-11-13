@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
 sudo apt update -y
-sudo apt install openjdk-8-jdk -y
 sudo apt install openjdk-11-jdk -y
 
 #importing the GPG key for jenkins repo

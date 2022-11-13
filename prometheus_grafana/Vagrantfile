@@ -3,6 +3,7 @@ Vagrant.configure("2") do |config|
 config.vm.provider "virtualbox" do |v|
     v.memory = 1024
     v.cpus = 1
+    v.name = "Prometheus-Grafana"
   end
     
 config.winrm.transport = :plaintext
@@ -16,6 +17,7 @@ config.vm.define "prom" do |p|
     p.vm.provision "shell", reboot: true
     p.vm.provision "shell", path: "provision/add_to_domain.sh"
     p.vm.provision "shell", path: "provision/prometheus_grafana.sh"
+    p.vm.provision "shell", path: "provision/puppetnode_setup.sh"
     p.vm.provision "shell", reboot: true
     end
 

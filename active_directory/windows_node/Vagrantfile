@@ -3,6 +3,7 @@ Vagrant.configure("2") do |config|
   config.vm.provider "virtualbox" do |v|
     v.memory = 1024
     v.cpus = 1
+    v.name = "Windows-Node-01"
   end
   config.winrm.transport = :plaintext
   config.winrm.basic_auth_only = true
