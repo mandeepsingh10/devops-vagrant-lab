@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-server_name="a4l-prometheus"
+server_name="a4l-linux01"
 password="msx@9797"
 domain="animals4life.local"
 domain_ip="192.168.56.2"
@@ -51,3 +51,8 @@ EOT
 
 # apply changes to /etc/resolv.conf
 sudo resolvconf -u
+## install ufw
+
+sudo apt install ufw -y
+sudo systemctl start ufw
+sudo systemctl enable ufw

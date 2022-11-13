@@ -51,3 +51,9 @@ EOT
 
 # apply changes to /etc/resolv.conf
 sudo resolvconf -u
+
+## install ufw
+
+sudo apt install ufw -y
+sudo systemctl start ufw
+sudo systemctl enable ufw
