@@ -10,7 +10,7 @@ sudo apt update -y
 sudo apt upgrade -y
 
 #install packages required
-sudo apt install realmd libnss-sss libpam-sss sssd sssd-tools adcli samba-common-bin oddjob oddjob-mkhomedir packagekit resolvconf tree ncdu vim -y
+sudo apt install realmd libnss-sss libpam-sss sssd sssd-tools adcli samba-common-bin oddjob oddjob-mkhomedir packagekit resolvconf tree ncdu vim curl -y
 
 ##change hostname
 
@@ -53,6 +53,3 @@ EOT
 sudo resolvconf -u
 ## install ufw
 
-sudo apt install ufw -y
-sudo systemctl start ufw
-sudo systemctl enable ufw

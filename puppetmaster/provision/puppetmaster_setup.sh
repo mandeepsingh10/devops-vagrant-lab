@@ -17,7 +17,7 @@ sudo sed -i 's/JAVA_ARGS="-Xms2g -Xmx2g -Djruby.logger.class=com.puppetlabs.jrub
 
 
 sudo systemctl start puppetserver
-suso systemct enable puppetserver
+sudo systemct enable puppetserver
 sudo systemctl status puppetserver
 
 ##Configure puppet server

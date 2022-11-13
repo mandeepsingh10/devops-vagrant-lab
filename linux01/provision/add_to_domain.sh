@@ -66,4 +66,7 @@ cat <<EOT> linux_admins
 %linux_admins ALL=(ALL) NOPASSWD:ALL
 EOT
 
+#Allow users to run puppet command with sudo. ex - sudo puppet agent -tvvv
+sudo sed -e '/secure_path/s/^/#/g' -i /etc/sudoers
+
 #System has been provisioned

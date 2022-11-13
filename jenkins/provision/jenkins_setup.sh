@@ -12,11 +12,9 @@ echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] https://pkg.jenkins
 #Install Jenkins and enable on startup
 sudo apt update
 sudo apt install jenkins -y
+sudo systemctl start jenkins
 sudo systemctl enable --now jenkins
 
-#Modify Firewall to Allow Jenkins
-sudo ufw allow 8080
-sudo ufw enable
 
 #Display the initial admin password for jenkins 
 sudo cat /var/lib/jenkins/secrets/initialAdminPassword
