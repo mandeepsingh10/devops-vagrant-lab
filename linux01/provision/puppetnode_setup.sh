@@ -9,21 +9,13 @@ sudo apt-get update -y
 sudo apt-get install puppet-agent -y
 sudo /opt/puppetlabs/bin/puppet resource service puppet ensure=running enable=true
 
-#sudo chown -R puppet /etc/puppetlabs/
-#sudo chmod -R 0755 /etc/puppetlabs/
+#add puppetmaster entry in /etc/hosts file
+cd /etc
+cat <<EOT>> hosts
+192.168.56.7	puppetmaster.animals4life.local	puppet
+EOT
 
-#sudo chown -R puppet /var/run/puppetlabs/
-#sudo chown -R puppet /var/log/puppetlabs/
-#sudo chmod -R 0755 /var/run/puppetlabs/
-
-#cd /etc/puppetlabs/puppet
-#cat <<EOT>> puppet.conf
-#[main]
-#certname = puppetclient
-#server = puppetmaster
-#EOT
-
-sudo /opt/puppetlabs/bin/puppet set server puppetmaster.animals4life.local --section agent
+sudo /opt/puppetlabs/bin/puppet config set server puppetmaster.animals4life.local --section agent
 sudo /opt/puppetlabs/bin/puppet config set ca_server puppetmaster.animals4life.local --section agent
 
 sudo systemctl start puppet
