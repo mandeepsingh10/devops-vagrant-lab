@@ -49,3 +49,4 @@ WantedBy=multi-user.target
 
 EOT
 
+sudo systemctl start node_exporter.service

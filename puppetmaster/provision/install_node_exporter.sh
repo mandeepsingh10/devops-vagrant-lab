@@ -52,3 +52,4 @@ EOT
 systemctl start node_exporter.service
 systemctl enable node_exporter.service
 systemctl status node_exporter.service
+sudo systemctl start node_exporter.service
