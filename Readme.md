@@ -8,8 +8,10 @@ Start the VMs in the following order to avoid any connectivity issues.
 4. Rest of the VMs
 
 Domain name used for setting up the lab is msx.local. This can be changed by the command
+
 <sudo sed -i 's|msx|newdomain|g'> script_name 
 <sudo sed -i 's|MSX|NEWDOMAIN|g'> script_name
+
 The above command assumes that the new domain ends with .local suffix. Please modify the command accordingly incase you want to change the domain suffix.
 This command needs to be run for all the scripts present in /data folder. 
 
