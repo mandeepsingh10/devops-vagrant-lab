@@ -16,9 +16,9 @@ sudo apt-get install puppetserver -y
 sudo sed -i 's/JAVA_ARGS="-Xms2g -Xmx2g -Djruby.logger.class=com.puppetlabs.jruby_utils.jruby.Slf4jLogger"/JAVA_ARGS="-Xms1g -Xmx1g -Djruby.logger.class=com.puppetlabs.jruby_utils.jruby.Slf4jLogger"/g' /etc/default/puppetserver
 
 
-sudo systemctl start puppetserver
-sudo systemct enable puppetserver
-sudo systemctl status puppetserver
+sudo systemctl start puppetserver.service
+sudo systemctl enable puppetserver.service
+sudo systemctl status puppetserver.service
 
 ##Configure puppet server
 sudo /opt/puppetlabs/bin/puppet config set server puppetmaster.animals4life.local --section main
