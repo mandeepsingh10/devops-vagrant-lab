@@ -48,7 +48,7 @@ ExecStart=/usr/local/bin/node_exporter \
 WantedBy=multi-user.target
 
 EOT
-
-systemctl start node_exporter.service
-systemctl enable node_exporter.service
-systemctl status node_exporter.service
+sudo systemctl daemon-reload
+sudo systemctl start node_exporter.service
+sudo systemctl enable node_exporter.service
+sudo systemctl status node_exporter.service
