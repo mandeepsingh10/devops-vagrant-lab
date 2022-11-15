@@ -22,7 +22,7 @@ sudo systemctl status puppetserver.service
 
 ##Configure puppet server
 sudo /opt/puppetlabs/bin/puppet config set server puppetmaster.animals4life.local --section main
-sudo /opt/puppetlabs/bin/puppet config set runinterval 1h --section main
+sudo /opt/puppetlabs/bin/puppet config set runinterval 30m --section main
 
 sudo /opt/puppetlabs/bin/puppet config set environment production --section server
 sudo /opt/puppetlabs/bin/puppet config set dns_alt_names puppet,puppetmaster,puppetmaster.animals4life.local --section server

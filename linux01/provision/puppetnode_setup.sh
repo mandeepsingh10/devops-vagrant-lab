@@ -11,6 +11,7 @@ sudo apt-get install puppet-agent -y
 
 sudo /opt/puppetlabs/bin/puppet config set server puppetmaster.animals4life.local --section main
 sudo /opt/puppetlabs/bin/puppet config set ca_server puppetmaster.animals4life.local --section main
+sudo /opt/puppetlabs/bin/puppet config set runinterval 30m --section main
 sudo /opt/puppetlabs/bin/puppet resource service puppet ensure=running enable=true
 sudo systemctl start puppet
 sudo systemctl enable puppet
