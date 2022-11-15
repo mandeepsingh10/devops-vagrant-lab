@@ -19,6 +19,6 @@ This command needs to be run for all the scripts present in /data folder.
 The default password used for the lab is msx@9797, except for the default configs of gitlab, jenkins and grafana.
 
 The scripts present in /vagrant_scripts can be used to run vagrant commands from anywhere, just modify your VM path accordingly.
-These scripts just <cd> to the vagrant directory and run the commands, nothing fancy.
+These scripts just 'cd' to the vagrant directory and run the commands, nothing fancy.
 
 
