@@ -1,5 +1,6 @@
 ---------------IMP-----------------
-View Lab_Setup.png file to check the lab configuration.
+
+Refer to Lab_Setup.png file to check the lab configuration.
 
 -------------How-To----------------
 
