@@ -2,7 +2,7 @@
 # from the master's pe_repo by downloading it to C:\tmp first and then running
 # msiexec on it from there.
 
-$puppet_master_server = "puppetmaster.animals4life.local"
+$puppet_master_server = "puppetmaster.msx.local"
 $msi_source = "https://downloads.puppetlabs.com/windows/puppet7/puppet-agent-7.20.0-x64.msi"
 $msi_dest = "C:\tmp\puppet-agent-x64.msi"
 

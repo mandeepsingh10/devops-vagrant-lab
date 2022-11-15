@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-server_name="puppetmaster"
+server_name="Enter_name_of_the_server_here"
 password="msx@9797"
 domain="msx.local"
 domain_ip="192.168.56.2"
@@ -10,7 +10,7 @@ sudo apt update -y
 sudo apt upgrade -y
 
 #install packages required
-sudo apt install realmd libnss-sss libpam-sss sssd sssd-tools adcli samba-common-bin oddjob oddjob-mkhomedir packagekit resolvconf tree ncdu vim curl -y
+sudo apt install realmd libnss-sss libpam-sss sssd sssd-tools adcli samba-common-bin oddjob oddjob-mkhomedir packagekit  resolvconf ncdu tree vim curl -y
 
 ##change hostname
 
@@ -30,4 +30,3 @@ EOT
 
 # apply changes to /etc/resolv.conf
 sudo resolvconf -u
-

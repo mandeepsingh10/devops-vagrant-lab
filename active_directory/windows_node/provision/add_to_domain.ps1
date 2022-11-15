@@ -1,6 +1,6 @@
 net user administrator msx@9797
 
-$domain = "animals4life.local"
+$domain = "msx.local"
 $domainControllerIp = "192.168.56.2"
 
 $ErrorActionPreference = "Stop"

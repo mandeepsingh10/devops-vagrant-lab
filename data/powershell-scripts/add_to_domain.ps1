@@ -1,6 +1,6 @@
 net user administrator msx@9797
 
-$domain = "animals4life.local"
+$domain = "msx.local"
 $domainControllerIp = "192.168.56.2"
 
 $ErrorActionPreference = "Stop"
@@ -57,7 +57,4 @@ Add-Computer `
                         (ConvertTo-SecureString "msx@9797" -AsPlainText -Force)))
 
 
-#Disable IPv6 networking
-#Disable-NetAdapterBinding –InterfaceAlias $vadapter –ComponentID ms_tcpip6
-#Disable-NetAdapterBinding –InterfaceAlias $dadapter –ComponentID ms_tcpip6
 

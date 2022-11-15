@@ -20,7 +20,7 @@ sudo systemctl start puppetserver.service
 sudo systemctl enable puppetserver.service
 sudo systemctl status puppetserver.service
 
-##Configure puppet server
+##Configure puppet server### (Incase of hostnamechange, please point to your puppetmaster's fqdn instead of  puppetmaster.msx.local)##
 sudo /opt/puppetlabs/bin/puppet config set server puppetmaster.msx.local --section main
 sudo /opt/puppetlabs/bin/puppet config set runinterval 30m --section main
 

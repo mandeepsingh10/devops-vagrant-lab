@@ -2,7 +2,7 @@
 
 server_name="a4l-prometheus"
 password="msx@9797"
-domain="animals4life.local"
+domain="msx.local"
 domain_ip="192.168.56.2"
 
 #update and upgrade os
@@ -24,7 +24,7 @@ cat <<EOT > head
 # 127.0.0.53 is the systemd-resolved stub resolver.
 # run "systemd-resolve --status" to see details about the actual nameservers.
 
-search animals4life.local
+search msx.local
 nameserver 192.168.56.2
 EOT
 

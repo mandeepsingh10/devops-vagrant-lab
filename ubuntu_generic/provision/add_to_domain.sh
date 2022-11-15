@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 password="msx@9797"
-domain="animals4life.local"
+domain="msx.local"
 domain_ip="192.168.56.2"
 
 #join the realm
@@ -29,13 +29,13 @@ sudo systemctl restart sssd.service
 cd /etc/sssd
 cat <<EOT> sssd.conf
 [sssd]
-domains = animals4life.local
+domains = msx.local
 config_file_version = 2
 services = nss, pam
 
-[domain/animals4life.local]
-ad_domain = animals4life.local
-krb5_realm = ANIMALS4LIFE.LOCAL
+[domain/msx.local]
+ad_domain = msx.local
+krb5_realm = MSX.LOCAL
 realmd_tags = manages-system joined-with-adcli
 cache_credentials = True
 id_provider = ad
@@ -50,8 +50,8 @@ EOT
 sudo systemctl restart sssd.service
 
 #allow ad groups to login to the server
-sudo realm permit -g linux_users@animals4life.local
-sudo realm permit -g linux_admins@animals4life.local
+sudo realm permit -g linux_users@msx.local
+sudo realm permit -g linux_admins@msx.local
 sudo systemctl restart sssd.service
 
 #update password login
