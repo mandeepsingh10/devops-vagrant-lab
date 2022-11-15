@@ -1,4 +1,7 @@
---------------USAGE----------------
+---------------IMP-----------------
+View Lab_Setup.png file to check the lab configuration.
+
+-------------How-To----------------
 
 Start the VMs in the following order to avoid any connectivity issues.
 
