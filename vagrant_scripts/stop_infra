@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+##Define Repo Path
+repo_path='/home/msx10'
+#Start vagrant infra
+
+cd $repo_path/repo/vagrant-infra/active_directory/domain_controller
+vagrant halt
+cd $repo_path/repo/vagrant-infra/puppetmaster
+vagrant halt
+cd $repo_path/repo/vagrant-infra/prometheus_grafana
+vagrant halt
+cd $repo_path/repo/vagrant-infra/jenkins
+vagrant halt
+cd $repo_path/repo/vagrant-infra/git
+vagrant halt
+cd $repo_path/repo/vagrant-infra/active_directory/windows_node
+vagrant halt
+

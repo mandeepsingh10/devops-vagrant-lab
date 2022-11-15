@@ -1,0 +1,4 @@
+##Modify the repo_path variable to where you cloned the repository##
+repo_path='/home/msx10'
+cd $repo_path/repo/vagrant-infra/active_directory/domain_controller
+vagrant up
