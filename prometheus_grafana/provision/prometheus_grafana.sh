@@ -152,13 +152,13 @@ scrape_configs:
     static_configs:
       - targets: ['localhost:9100']
   
-  - job_name: 'animal4life.local-INFRA'
+  - job_name: 'msx.local-INFRA'
 
     static_configs:
-      - targets: ['a4ldc01.animals4life.local:9182']
-      - targets: ['puppetmaster.animals4life.local:9100']        
-      - targets: ['a4l-git.animals4life.local:9100']
-      - targets: ['a4l-jenkins.animals4life.local:9100']
+      - targets: ['a4ldc01.msx.local:9182']
+      - targets: ['puppetmaster.msx.local:9100']        
+      - targets: ['a4l-git.msx.local:9100']
+      - targets: ['a4l-jenkins.msx.local:9100']
 
 EOT
 

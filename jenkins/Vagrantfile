@@ -1,7 +1,10 @@
 Vagrant.configure("2") do |config|
+
+config.vm.provider "virtualbox" do |vb|
+     vb.memory = "1024"
+     vb.name = "Jenkins"
+    end
     
-config.winrm.transport = :plaintext
-config.winrm.basic_auth_only = true 
   
 ### prometheus and grafana vm ###
 config.vm.define "jenkins" do |j|
@@ -13,10 +16,6 @@ config.vm.define "jenkins" do |j|
     j.vm.provision "shell", path: "provision/jenkins_setup.sh"
     j.vm.provision "shell", path: "provision/install_node_exporter.sh"
     j.vm.provision "shell", path: "provision/puppetnode_setup.sh"
-    j.vm.provider "virtualbox" do |vb|
-     vb.memory = "1024"
-     vb.name = "Jenkins"
-    end
     j.vm.provision "shell", reboot: true
     end
 
