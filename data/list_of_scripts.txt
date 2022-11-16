@@ -1,18 +1,19 @@
-gitlab.sh
-gitsetup.sh
-puppetnode_setup.sh
-jenkins_setup.sh
-prometheus_grafana.sh
-puppetnode_setup.sh
-add_to_domain.sh
-initialize.sh
-install_node_exporter.sh
-puppetmaster_setup.sh
-startup.sh
-add_to_domain.sh
-install_win_exporter.ps1
-ou_setup.ps1
-setupdc.ps1
-add_to_domain.ps1
-puppetnode.ps1
+SHELL SCRIPTS
 
+initialize.sh              -> Bootstraps linux hosts 
+add_to_domain.sh           -> Adds linux hosts to msx.local domain
+gitlab.sh                  -> Setup gitlab server   
+puppetnode_setup.sh        -> Installs puppet agent on linux nodes
+puppetmaster_setup.sh      -> Configures the puppetmaster server 
+jenkins_setup.sh           -> Setup Jenkins server
+prometheus_grafana.sh      -> Setup prometheus and grafana 
+install_node_exporter.sh   -> Installs node exporter on linux hosts
+
+
+POWERSHELL SCRIPTS
+
+setupdc.ps1                -> Setup the domain controller                
+add_to_domain.ps1          -> Adds windows hosts to msx.local domain
+install_win_exporter.ps1   -> Installs windows exporter
+ou_setup.ps1               -> Creates OUs and users in AD
+puppetnode.ps1             -> Installs puppet agent on windows hosts
