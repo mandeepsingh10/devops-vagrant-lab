@@ -1,4 +1,4 @@
 ##Modify the repo_path variable to where you cloned the repository##
 repo_path='/home/msx10'
-cd $repo_path/repo/vagrant-infra/prometheus_grafana
+cd $repo_path/devops-vagrant-lab/prometheus_grafana
 vagrant up

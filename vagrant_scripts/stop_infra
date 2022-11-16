@@ -3,16 +3,16 @@
 repo_path='/home/msx10'
 #Start vagrant infra
 
-cd $repo_path/repo/vagrant-infra/active_directory/domain_controller
+cd $repo_path/devops-vagrant-lab/active_directory/domain_controller
 vagrant halt
-cd $repo_path/repo/vagrant-infra/puppetmaster
+cd $repo_path/devops-vagrant-lab/puppetmaster
 vagrant halt
-cd $repo_path/repo/vagrant-infra/prometheus_grafana
+cd $repo_path/devops-vagrant-lab/prometheus_grafana
 vagrant halt
-cd $repo_path/repo/vagrant-infra/jenkins
+cd $repo_path/devops-vagrant-lab/jenkins
 vagrant halt
-cd $repo_path/repo/vagrant-infra/git
+cd $repo_path/devops-vagrant-lab/git
 vagrant halt
-cd $repo_path/repo/vagrant-infra/active_directory/windows_node
+cd $repo_path/devops-vagrant-lab/active_directory/windows_node
 vagrant halt
 
