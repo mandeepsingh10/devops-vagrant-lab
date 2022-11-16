@@ -135,7 +135,6 @@ sudo systemctl enable node_exporter
 
 cd /etc/prometheus/
 cat <<EOT > prometheus.yml
-
 global:
   scrape_interval:     15s # By default, scrape targets every 15 seconds.
 
@@ -152,8 +151,20 @@ scrape_configs:
 
     static_configs:
       - targets: ['localhost:9100']
+  
+  - job_name: 'animal4life.local-INFRA'
+
+    static_configs:
+      - targets: ['a4ldc01.animals4life.local:9182']
+      - targets: ['puppetmaster.animals4life.local:9100']        
+      - targets: ['a4l-git.animals4life.local:9100']
+      - targets: ['a4l-jenkins.animals4life.local:9100']
 
 EOT
+
+##Reload systemctl daemon and restarts prometheus.service
+systemctl daemon-reload
+sudo systemctl restart prometheus
 
 #install grafana
 
