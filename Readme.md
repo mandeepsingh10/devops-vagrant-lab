@@ -8,7 +8,11 @@ Getting started with a DevOps home lab is great. You can spin up, mess around an
 ---
 
 Atleast 8GB/16GB of memory
+
+
 150GB of disk space
+
+
 A processor equivalent to Intel's i5/i7
 
 **Info**
