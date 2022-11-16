@@ -1,6 +1,6 @@
-
+sleep 120
 Import-Module activedirectory
-
+sleep 30
 #convert password string to secure.string 
 $password="msx@9797"
 $securepassword = ConvertTo-SecureString $password -AsPlainText -Force
