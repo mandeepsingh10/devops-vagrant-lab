@@ -99,7 +99,7 @@ Start the VMs in the following order to avoid any connectivity issues.
 
 Domain name used for setting up the lab is msx.local. This can be changed by running the command against the scripts in the data directory
 
-EXAMPLE:
+**EXAMPLE**
 
 
 + `sudo sed -i 's|msx|newdomain|g' add_to_domain.sh`
