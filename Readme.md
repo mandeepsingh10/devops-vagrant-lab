@@ -74,32 +74,32 @@ You need at least 1CPU core 1GB RAM per VMs for the VMs except for the Puppetmas
 **How to setup this lab on your own PC/Laptop?**
 ---
 
-Install vagrant and virtualbox as mentioned at the start of this article.
++ Install vagrant and virtualbox as mentioned at the start of this article.
 
 
-Clone this github repository on your local PC/Laptop.
++ Clone this github repository on your local PC/Laptop.
 
 
-Start the Vms by using the provided scripts in vagrant_scripts or CD to the directory of the VMs and run vagrant up command
++ Start the Vms by using the provided scripts in vagrant_scripts or CD to the directory of the VMs and run vagrant up command
 
 
 Start the VMs in the following order to avoid any connectivity issues.
 
-1. Domain Controller
+1. **Domain Controller**
 
  
-2. Puppet Master 
+2. **Puppet Master** 
 
 
-3. Prometheus Server 
+3. **Prometheus Server** 
 
 
-4. Rest of the VMs
+4. **Rest of the VMs**
 
 
-Domain name used for setting up the lab is msx.local. This can be changed by running the command against the scripts in the data directory
++ Domain name used for setting up the lab is msx.local. This can be changed by running the command against the scripts in the data directory
 
-**EXAMPLE**
++ **EXAMPLE**
 
 
 + `sudo sed -i 's|msx|newdomain|g' add_to_domain.sh`
@@ -111,6 +111,6 @@ Domain name used for setting up the lab is msx.local. This can be changed by run
 The above command assumes that the new domain ends with .local suffix. Please modify the command accordingly incase you want to change the domain suffix. This command needs to be run for all the scripts present in data folder.
 
 
-The default password used across the lab is msx@9797, for all AD users, admin passwords etc except for the default configs of gitlab, jenkins and grafana.
++ The default password used across the lab is msx@9797, for all AD users, admin passwords etc except for the default configs of gitlab, jenkins and grafana.
 
 
