@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 ##Define Repo Path
-repo_path='/home/msx10'
+repo_path='/home/msx10/repo'
 #Start vagrant infra
 
 cd $repo_path/devops-vagrant-lab/active_directory/domain_controller

@@ -1,4 +1,4 @@
 ##Modify the repo_path variable to where you cloned the repository##
-repo_path='/home/msx10'
+repo_path='/home/msx10/repo'
 cd $repo_path/devops-vagrant-lab/puppetmaster
 vagrant up
