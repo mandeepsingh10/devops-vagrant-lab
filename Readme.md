@@ -5,11 +5,14 @@
 Getting started with a DevOps home lab is great. You can spin up, mess around and use it as playground for learning. Also while setting up a lab on your own you will encounter amy challenges and issues which willhelp you understand how all these tools are connected together. No need to have physical servers or cloud account which might charge extra money :). Here I am using my PC to build a small scale lab with all the mainstream DevOps tools.
 
 **Minimum/Recommended System Requirements for the lab**
+---
 
 Atleast 8GB/16GB of memory
 150GB of disk space
 A processor equivalent to Intel's i5/i7
 
+**Info**
+---
 
 First thing first we need to install Virtual Box and Vagrant on the PC/Laptop. These two things will spawn seven VMs for us. 
 
@@ -35,13 +38,14 @@ You need at least 1CPU core 1GB RAM per VMs for the VMs except for the Puppetmas
 6. One windows and one linux server which can be used to setup a sql server or web servers.
 
 
-This is our lab configuration.
-
+**Lab Configuration**
+---
 
 ![logo](img/Lab_Setup.png)
 
 
-Lab Details
+**Lab Details**
+---
 
 1. All the hosts windows or linux are added to the domain msx.local as soon as you run vagrant up command for the host.
 
@@ -61,8 +65,8 @@ Lab Details
 6. The vagrant_scripts directory conatains simple scripts which can be used to run vagrant commands from anywhere, just modify your VM path accordingly. These scripts just 'cd' to the vagrant directory and run the commands, nothing fancy but comes in handy when you have many VMs. You will need to add this path to your PATH variable to be able to use them from anywhere.
 
 
-How to setup this lab on your own PC/Laptop? 
-
+**How to setup this lab on your own PC/Laptop?**
+---
 
 Install vagrant and virtualbox as mentioned at the start of this article.
 
