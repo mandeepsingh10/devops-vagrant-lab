@@ -35,6 +35,11 @@ You need at least 1CPU core 1GB RAM per VMs for the VMs except for the Puppetmas
 6. One windows and one linux server which can be used to setup a sql server or web servers.
 
 
+This is our lab configuration.
+
+
+![logo](img/Lab_Setup.png)
+
 
 Lab Details
 
