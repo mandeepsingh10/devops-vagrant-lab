@@ -83,7 +83,7 @@ You need at least 1CPU core 1GB RAM per VMs for the VMs except for the Puppetmas
 + Start the Vms by using the provided scripts in vagrant_scripts or CD to the directory of the VMs and run vagrant up command
 
 
-Start the VMs in the following order to avoid any connectivity issues.
+**Start the VMs in the following order to avoid any connectivity issues**
 
 1. **Domain Controller**
 
