@@ -1,5 +1,5 @@
 
-![logo](devops_logo.png)
+![logo](img/devops_logo.png)
 
 
 Getting started with a DevOps home lab is great. You can spin up, mess around and use it as playground for learning. Also while setting up a lab on your own you will encounter amy challenges and issues which willhelp you understand how all these tools are connected together. No need to have physical servers or cloud account which might charge extra money :). Here I am using my PC to build a small scale lab with all the mainstream DevOps tools.
