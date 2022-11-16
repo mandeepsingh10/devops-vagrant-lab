@@ -15,6 +15,13 @@ Atleast 8GB/16GB of memory
 
 A processor equivalent to Intel's i5/i7
 
+
+**Lab Configuration**
+---
+
+![logo](img/Lab_Setup.png)
+
+
 **Info**
 ---
 
@@ -41,11 +48,6 @@ You need at least 1CPU core 1GB RAM per VMs for the VMs except for the Puppetmas
 
 6. One windows and one linux server which can be used to setup a sql server or web servers.
 
-
-**Lab Configuration**
----
-
-![logo](img/Lab_Setup.png)
 
 
 **Lab Details**
