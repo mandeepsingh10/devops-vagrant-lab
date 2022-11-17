@@ -13,9 +13,9 @@ config.vm.define "jenkins" do |j|
     j.vm.provision "shell", path: "provision/initialize.sh"
     j.vm.provision "shell", reboot: true
     j.vm.provision "shell", path: "provision/add_to_domain.sh"
-    j.vm.provision "shell", path: "provision/jenkins_setup.sh"
     j.vm.provision "shell", path: "provision/install_node_exporter.sh"
     j.vm.provision "shell", path: "provision/puppetnode_setup.sh"
+    j.vm.provision "shell", path: "provision/jenkins_setup.sh"
     j.vm.provision "shell", reboot: true
     end
 
